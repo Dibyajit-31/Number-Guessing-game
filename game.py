@@ -23,6 +23,7 @@ def game_logic():
         elif num1<num:
             print('Hint - The number is bigger...')
         print('Try again...')
+        tries += 1
 
     if num == num1:
         print(f'You guessed it right in {tries} times!')
