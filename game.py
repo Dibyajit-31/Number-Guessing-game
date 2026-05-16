@@ -24,7 +24,7 @@ def game_logic():
             print('Hint - The number is bigger...')
         print('Try again...')
         tries += 1
-        num1 = input('Enter the guessed number: ')
+        num1 = int(input('Enter the guessed number: '))
 
     if num == num1:
         print(f'You guessed it right in {tries} times!')
@@ -34,8 +34,11 @@ def game_logic():
 game_logic()
 
 choice = input('Do you want to play the game again?(y/n): ')
-
-if choice.lower() == 'y':
+while choice.lower() == 'y':
     game_logic()
-else:
+    choice = input('Do you want to play again?(y/n): ')
+
+if choice.lower() == 'n':
     print('Thankyou for playing the game')
+else:
+    print('Please give a valid input and try again...\n Bye')
