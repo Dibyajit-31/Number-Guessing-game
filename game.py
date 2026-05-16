@@ -23,13 +23,6 @@ def game_logic():
         elif num1<num:
             print('Hint - The number is bigger...')
         print('Try again...')
-        choice = input('Do you want to continue?(y/n): ')
-        if choice.lower() == 'y':
-            num1 = int(input('Enter the guessed number: '))
-            tries += 1
-        elif choice.lower() == 'n':
-            print('Ok... come again!')
-            break
 
     if num == num1:
         print(f'You guessed it right in {tries} times!')
